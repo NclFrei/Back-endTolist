@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Tolist.Modelos;
 
-internal class Tarefa
+public class Tarefa
 {
 
     public Tarefa(string nome, string descricao)
@@ -21,7 +21,7 @@ internal class Tarefa
     public string? Status {  get; set; }
     public string? Categoria { get; set; }
     public int? AmbienteId { get; set; }
-    public virtual Ambiente Ambiente { get; set; }
+    public virtual Ambiente? Ambiente { get; set; }
     public DateTime? DataInicio { get; set; }
     public DateTime? DataFim { get; set; }
     public string? Icone { get; set; }
@@ -35,5 +35,10 @@ internal class Tarefa
             $"Data inicio: {DataInicio}" +
             $"Data fim: {DataFim}" +
             $"Icone: {Icone}");
+    }
+
+    public override string ToString()
+    {
+        return $"Nome: {Nome}\n Descrição: {Descricao}\n Status: {Status} \nCategoria: {Categoria}\n Data inicio: {DataInicio}\n Data fim: {DataFim}\n";
     }
 }

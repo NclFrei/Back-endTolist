@@ -38,4 +38,8 @@ internal class DAL<T> where T : class
         context.SaveChanges();
     }
 
+    public T? RecuperarPor(Func<T, bool> condicao)
+    {
+        return context.Set<T>().FirstOrDefault(condicao);
+    }
 }

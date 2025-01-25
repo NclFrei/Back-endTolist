@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Tolist.Banco;
 
@@ -11,9 +12,11 @@ using Tolist.Banco;
 namespace Tolist.Migrations
 {
     [DbContext(typeof(TolistContext))]
-    partial class TolistContextModelSnapshot : ModelSnapshot
+    [Migration("20250125025316_criandoTbAmbiente")]
+    partial class criandoTbAmbiente
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

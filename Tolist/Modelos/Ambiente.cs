@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Tolist.Modelos;
 
-internal class Ambiente
+public class Ambiente
 {
     public virtual ICollection<Tarefa> Tarefas { get; set; } = new List<Tarefa>();
     public string Nome {  get; set; }
