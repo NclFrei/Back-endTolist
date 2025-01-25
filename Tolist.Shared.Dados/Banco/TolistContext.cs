@@ -9,7 +9,7 @@ using Tolist.Modelos;
 
 namespace Tolist.Banco;
 
-internal class TolistContext : DbContext
+public class TolistContext : DbContext
 {
     public DbSet<Tarefa> Tarefas { get; set; }
 

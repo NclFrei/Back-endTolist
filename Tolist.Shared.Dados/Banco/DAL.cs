@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Tolist.Banco;
 
-internal class DAL<T> where T : class
+public class DAL<T> where T : class
 {
     private readonly TolistContext context;
 
