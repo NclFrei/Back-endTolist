@@ -17,8 +17,6 @@ internal class MenuRegistrarTarefa : Menu
         string nomeTarefa = Console.ReadLine()!;
         Console.Write("Digite a descrição da sua tarefa: ");
         string descricaoTarefa = Console.ReadLine()!;
-        Tarefa tarefa = new Tarefa(nomeTarefa, descricaoTarefa);
-        tarefaDAL.Adicionar(tarefa);
         Console.WriteLine($"A tarefa {nomeTarefa} foi adiciona com sucesso!");
         Console.Clear();
     }
