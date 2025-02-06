@@ -11,6 +11,7 @@ builder.Services.AddTransient<DAL<Tarefa>>();
 builder.Services.AddTransient<DAL<Ambiente>>();
 
 builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddSwaggerGen();
 
 
 builder.Services.Configure<Microsoft.AspNetCore.Http.Json.JsonOptions>(options => options.SerializerOptions.ReferenceHandler = ReferenceHandler.IgnoreCycles);
@@ -18,5 +19,8 @@ builder.Services.Configure<Microsoft.AspNetCore.Http.Json.JsonOptions>(options =
 var app = builder.Build();
 
 app.AddEndPointsTarefas();
+
+app.UseSwagger();
+app.UseSwaggerUI();
 
 app.Run();
